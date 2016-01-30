@@ -9,7 +9,7 @@ public class FollowPlayer : MonoBehaviour {
 	// Use this for initialization
 	
   void Update () {
-
+  	TurnOn();
   }
 
   public void TurnOn(){
@@ -18,7 +18,7 @@ public class FollowPlayer : MonoBehaviour {
   	Vector3 screenPos = Camera.main.WorldToScreenPoint(pos);
     transform.position = new Vector3 (screenPos.x, screenPos.y + offset, screenPos.z);
 
-  	Invoke("TurnOff", 3f);
+  	//Invoke("TurnOff", 3f);
   }
 
   void TurnOff(){
