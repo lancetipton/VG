@@ -218,6 +218,7 @@ public class CharController : MonoBehaviour {
 			break;
 			
 		case State.KnockedBack:
+			velocity = rbody.velocity;
 			if (timeInState > 0.5f) EnterState(State.JumpingDown);
 			break;
 		}
