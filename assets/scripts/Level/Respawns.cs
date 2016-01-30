@@ -5,7 +5,7 @@ public class Respawns : MonoBehaviour {
 
 	public static Respawns instance;
 
-
+	
 	public GameObject[] ResData = new GameObject[8];
 
 	void Awake(){
