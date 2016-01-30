@@ -63,6 +63,7 @@ GameObject:
   - 50: {fileID: 5065382}
   - 61: {fileID: 6174256}
   - 114: {fileID: 11447770}
+  - 114: {fileID: 11466124}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -312,6 +313,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 217600
   hitCollider: {fileID: 126158}
+--- !u!114 &11466124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8daf6e7cdb9540d7a3c31e08a6b5800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11493168
 MonoBehaviour:
   m_ObjectHideFlags: 1
