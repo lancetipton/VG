@@ -154,8 +154,14 @@
     <Compile Include="assets\scripts\EventComponents\Triggers\PositionBoundsTrigger.cs" />
     <Compile Include="assets\scripts\EventComponents\Triggers\SceneLoadTrigger.cs" />
     <Compile Include="assets\scripts\EventComponents\UnityEventSubclasses.cs" />
+    <Compile Include="assets\scripts\Level\HurtPlayer.cs" />
+    <Compile Include="assets\scripts\Level\KnockOut.cs" />
+    <Compile Include="assets\scripts\Level\Respawns.cs" />
     <Compile Include="assets\scripts\PlayerController\CharController.cs" />
     <Compile Include="assets\scripts\PlayerController\CharDamage.cs" />
+    <Compile Include="assets\scripts\PlayerController\RespawnPlayer.cs" />
+    <Compile Include="assets\scripts\PlayerController\Striker.cs" />
+    <Compile Include="assets\scripts\UI\PlayerStatusDisplay.cs" />
     <Compile Include="assets\scripts\WrapX.cs" />
   </ItemGroup>
   <ItemGroup>
