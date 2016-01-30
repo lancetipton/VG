@@ -9,7 +9,13 @@ using System.Collections.Generic;
 public class CharDamage : MonoBehaviour {
 	#region Public Properties
 	
+	// Get actual amount of damage points accumulated.
 	public int damage;
+	
+	// Get what multiple 
+	public float knockbackFactor {
+		get { return 1 + damage/50f; }
+	}
 	
 	#endregion
 	//--------------------------------------------------------------------------------
