@@ -13,11 +13,18 @@ public class CameraBoundsScript: MonoBehaviour {
 
 	void Update() {
 		// Figure out our bounds and such.
-		var first = targets[0];
-		var bounds = new Bounds(getCenter(first), Vector3.zero);
-		// This duplicates the first, but that shouldn't be a big deal.
+		var first = true;
+		var bounds = new Bounds();
 		foreach (var target in targets) {
-			bounds.Encapsulate(getCenter(target));
+			// Skipping inactives causes zooming in on remaining players while
+			// players are out.
+			if (!target.activeSelf) continue;
+			if (first) {
+				bounds = new Bounds(getCenter(target), Vector3.zero);
+				first = false;
+			} else {
+				bounds.Encapsulate(getCenter(target));
+			}
 		}
 		var camera = GetComponent<Camera>();
 		// Make sure we are showing enough in both dimensions.
