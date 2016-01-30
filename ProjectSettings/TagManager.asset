@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Players
+  - Spikes
+  - Alter
+  - Rocks
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Terrain
+  - Objects
+  - Players
+  - Hitter
+  - Ground
+  - Trees
+  - Bridge
+  - Spikes
+  - Alter
+  - Rocks
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Spikes
+    uniqueID: 1115202207
+    locked: 0
+  - name: Ground
+    uniqueID: 1057381199
+    locked: 0
+  - name: Trees
+    uniqueID: 2648600927
+    locked: 0
+  - name: Players
+    uniqueID: 1759528335
+    locked: 0
+  - name: Rocks
+    uniqueID: 4068351743
+    locked: 0
+  - name: Bridge
+    uniqueID: 4053308123
+    locked: 0
+  - name: Trees Front
+    uniqueID: 2728504889
+    locked: 0
+  - name: Alter
+    uniqueID: 2774319139
+    locked: 0

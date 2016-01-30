@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: 5d18ee50fbab14aa597edb4c8ca6089a
+timeCreated: 1454148227
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: rocks_many_0
+    21300002: rocks_many_1
+    21300004: rocks_many_2
+    21300006: rocks_many_3
+    21300008: rocks_many_4
+    21300010: rocks_many_5
+    21300012: rocks_many_6
+    21300014: rocks_many_7
+    21300016: rocks_many_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: rocks_many_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 322
+        width: 153
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rocks_many_1
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 328
+        width: 162
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rocks_many_2
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 405
+        width: 115
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rocks_many_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 323
+        width: 117
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rocks_many_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 174
+        width: 156
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rocks_many_5
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 174
+        width: 286
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rocks_many_6
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 35
+        width: 133
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rocks_many_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 41
+        width: 119
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rocks_many_8
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 35
+        width: 119
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
