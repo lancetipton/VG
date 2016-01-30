@@ -11,6 +11,7 @@ TagManager:
   - Rocks
   - FxTemporaire
   - Clouds
+  - Lightning
   layers:
   - Default
   - TransparentFX
@@ -31,7 +32,7 @@ TagManager:
   - Alter
   - Rocks
   - Clouds
-  - 
+  - Lightning
   - 
   - 
   - 
@@ -47,6 +48,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Lightning
+    uniqueID: 3827723211
     locked: 0
   - name: Spikes
     uniqueID: 1115202207

@@ -130,6 +130,7 @@
      <Compile Include="assets\scripts\EventComponents\UnityEventSubclasses.cs" />
      <Compile Include="assets\scripts\Level\HurtPlayer.cs" />
      <Compile Include="assets\scripts\Level\KnockOut.cs" />
+     <Compile Include="assets\scripts\Level\Lightning.cs" />
      <Compile Include="assets\scripts\Level\Respawns.cs" />
      <Compile Include="assets\scripts\PlayerController\CharController.cs" />
      <Compile Include="assets\scripts\PlayerController\CharDamage.cs" />
