@@ -8,7 +8,7 @@ public class Lightning : MonoBehaviour {
 	public ParticleSystem[] Strikes = new ParticleSystem[5];
 
 	float strikeTimer;
-	
+	// -23 / 34
 	void Awake(){
 		instance = this;
 		strikeTimer = Time.time + Random.Range(1, 5);
@@ -32,9 +32,10 @@ public class Lightning : MonoBehaviour {
 	}
 
 	public void PlayLighting(){
-		print("play");
 		int number = Random.Range(0, 4);
-		Strikes[0].Play();
+		float pos = Random.Range(-23f, 34);
+		Strikes[number].transform.position = new Vector3(transform.position.x + pos, transform.position.y, transform.position.z);
+		Strikes[number].Play();
 	}
 
 }
