@@ -3,6 +3,7 @@ using System.Collections;
 
 public class RespawnPlayer : MonoBehaviour {
 
+	public ParticleSystem spawnPart;
 	GameObject new_pos;
 
 	void Start(){
@@ -10,6 +11,7 @@ public class RespawnPlayer : MonoBehaviour {
 	}
 
 	public void RestPos(){
+		spawnPart.Play();
 		new_pos = Respawns.instance.RandomSpawn();
 		Invoke("SetPos", 3f);
 		gameObject.SetActive(false);
