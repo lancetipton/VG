@@ -9462,6 +9462,18 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11447770, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: playerNum
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
   m_IsPrefabParent: 0
@@ -19241,37 +19253,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 177190, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_Name
-      value: Player 1
-      objectReference: {fileID: 0}
     - target: {fileID: 11447770, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
       propertyPath: debugText
       value: 
       objectReference: {fileID: 2037164993}
-    - target: {fileID: 19989546, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1759528335
-      objectReference: {fileID: 0}
-    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11447770, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: playerNum
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_Color.b
-      value: 1
+    - target: {fileID: 177190, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: m_Name
+      value: Player 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
