@@ -2,7 +2,7 @@
 using UnityEngine.Events;
 using System.Collections.Generic;
 
-public class CodeCharPhysicsController : MonoBehaviour {
+public class CharController : MonoBehaviour {
 	#region Public Properties
 	public float runSpeed = 4;
 	public float acceleration = 20;
@@ -12,7 +12,7 @@ public class CodeCharPhysicsController : MonoBehaviour {
 	public AudioClip[] sounds;
 	public UnityEngine.UI.Text debugText;
 	public LayerMask groundLayers;
-	public GameObject jabCollider;
+	public GameObject hitCollider;
 	
 	#endregion
 	//--------------------------------------------------------------------------------
@@ -32,7 +32,8 @@ public class CodeCharPhysicsController : MonoBehaviour {
 	const string kJumpStartAnim = "JumpStart";
 	const string kJumpFallAnim = "JumpFall";
 	const string kJumpLandAnim = "JumpLand";
-	const string kJabAnim = "Jab";
+	const string kWeakHitAnim = "WeakHit";
+	const string kStrongHitAnim = "StrongHit";
 	
 	enum State {
 		Idle,
@@ -41,14 +42,16 @@ public class CodeCharPhysicsController : MonoBehaviour {
 		JumpingUp,
 		JumpingDown,
 		Landing,
-		Jabbing
+		WeakHitting,
+		StrongHitting
 	}
 	State state;
 	Vector2 velocity;
 	float horzInput;
 	bool jumpJustPressed;
 	bool jumpHeld;
-	bool jabPressed;
+	bool weakHitPressed;
+	bool strongHitPressed;
 	
 	int airJumpsDone = 0;
 	Rigidbody2D rbody;
@@ -69,7 +72,8 @@ public class CodeCharPhysicsController : MonoBehaviour {
 		horzInput = Input.GetAxisRaw("Horizontal");
 		jumpJustPressed = Input.GetButtonDown("Jump");
 		jumpHeld = Input.GetButton("Jump");
-		jabPressed = Input.GetButtonDown("Jab");
+		weakHitPressed = Input.GetButtonDown("WeakHit");
+		strongHitPressed = Input.GetButtonDown("StrongHit");
 		
 		// Update state
 		ContinueState();
@@ -103,7 +107,7 @@ public class CodeCharPhysicsController : MonoBehaviour {
 	public void HitObject(GameObject target) {
 		Vector2 force = transform.TransformDirection(Vector3.right);
 		target.GetComponent<Rigidbody2D>().AddForceAtPosition(force, 
-			jabCollider.transform.position, ForceMode2D.Impulse);
+			hitCollider.transform.position, ForceMode2D.Impulse);
 	}
 	
 	#endregion
@@ -142,8 +146,11 @@ public class CodeCharPhysicsController : MonoBehaviour {
 			animator.Play(kJumpLandAnim);
 			airJumpsDone = 0;
 			break;
-		case State.Jabbing:
-			animator.Play(kJabAnim);
+		case State.WeakHitting:
+			animator.Play(kWeakHitAnim);
+			break;
+		case State.StrongHitting:
+			animator.Play(kStrongHitAnim);
 			break;
 		}
 		
@@ -184,16 +191,23 @@ public class CodeCharPhysicsController : MonoBehaviour {
 			else if (timeInState > 0.1f) RunOrJump();
 			break;
 			
-		case State.Jabbing:
-			jabCollider.SetActive(timeInState > 0.05f && timeInState < 0.15f);
+		case State.WeakHitting:
+			hitCollider.SetActive(timeInState > 0.05f && timeInState < 0.15f);
 			if (timeInState > 0.2f) EnterState(State.Idle);
 			break;
+			
+		case State.StrongHitting:
+			hitCollider.SetActive(timeInState > 0.15f && timeInState < 0.33f);
+			if (timeInState > 0.4f) EnterState(State.Idle);
+			break;
+			
 		}
 	}
 	
 	bool RunOrJump() {
 		if (jumpJustPressed && grounded) SetOrKeepState(State.JumpingUp);
-		else if (jabPressed && grounded) SetOrKeepState(State.Jabbing);
+		else if (weakHitPressed && grounded) SetOrKeepState(State.WeakHitting);
+		else if (strongHitPressed && grounded) SetOrKeepState(State.StrongHitting);
 		else if (horzInput < 0) SetOrKeepState(State.RunningLeft);
 		else if (horzInput > 0) SetOrKeepState(State.RunningRight);
 		else return false;
