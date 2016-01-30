@@ -144,7 +144,6 @@
     <Compile Include="assets\plugins\editor\scriptinspector3\Si3 Extensions\Si3 Open File.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\2D Painted Forest\2D Physics Assets\CrossPlatformInput 1\CrossPlatformInputGuidelines.txt" />
     <None Include="assets\Ferr\2D\Scripts\poly2tri.cs\AUTHORS.txt" />
     <None Include="assets\Ferr\2D\Scripts\poly2tri.cs\LICENSE.txt" />
     <None Include="assets\Ferr\2DTerrain\Shaders\Ferr2DTCommon.cginc" />
@@ -170,7 +169,6 @@
     <None Include="assets\Ferr\Common\Shaders\UnlitVertexColorTex.shader" />
     <None Include="assets\Ferr\Common\Shaders\UnlitVertexColorTexTransparent.shader" />
     <None Include="assets\Ferr\Common\Shaders\UnlitVertexColorTransparent.shader" />
-    <None Include="assets\Ferr\Docs\Ferr2DTerrainTool - Readme.txt" />
     <None Include="assets\JMO Assets\!JMO Assets Readme.txt" />
     <None Include="assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
     <None Include="assets\JMO Assets\Cartoon FX\CartoonFX4 Readme.txt" />
