@@ -6,8 +6,9 @@ public class HurtPlayer : MonoBehaviour {
 	public bool knockLeft;
 	public bool knockBackPlayer;
 
-	void OnTriggerEnter2D(Collider2D coll) {
+	void OnCollisionEnter2D(Collision2D coll) {
 		if(coll.gameObject.tag == "Players"){
+			print("here");
 			CharDamage Damage = coll.gameObject.GetComponent<CharDamage>();
 			int amount = Random.Range(4, 10);
 			if(knockBackPlayer){
