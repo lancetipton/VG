@@ -8,7 +8,10 @@ using System.Collections.Generic;
 
 public class Striker : MonoBehaviour {
 	#region Public Properties
-
+	
+	public int damageValue = 10;
+	public float knockbackValue = 2;
+	
 	#endregion
 	//--------------------------------------------------------------------------------
 	#region Private Properties
@@ -25,14 +28,25 @@ public class Striker : MonoBehaviour {
 	}
 	
 	protected void OnTriggerEnter2D(Collider2D other) {
-		Vector2 force = transform.TransformDirection(Vector3.right);
+		Debug.Log(gameObject.name + " hits " + other.name);
 		
-		Rigidbody2D targetRbody = other.GetComponent<Rigidbody2D>();
-		if (targetRbody != null) targetRbody.AddForceAtPosition(force, 
-				transform.position, ForceMode2D.Impulse);
+		// Calculate the force to apply
+		Vector2 force = transform.TransformVector(Vector3.right);
+		force.y = 0.5f;	// add a bit of upward force
+		force *= knockbackValue;
 		
 		CharDamage dam = other.GetComponent<CharDamage>();
 		if (dam != null) dam.ApplyDamage(10);
+		
+		CharController charCtrl = other.GetComponent<CharController>();
+		if (charCtrl != null) {
+			charCtrl.TakeHit(force);
+		} else {		
+			Rigidbody2D targetRbody = other.GetComponentInParent<Rigidbody2D>();
+			if (targetRbody != null) targetRbody.AddForce(force, ForceMode2D.Impulse);
+		}
+		Debug.Log("Applying knockback: " + force);
+		
 	}
 	
 

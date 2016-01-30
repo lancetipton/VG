@@ -44,7 +44,8 @@ public class CharController : MonoBehaviour {
 		JumpingDown,
 		Landing,
 		WeakHitting,
-		StrongHitting
+		StrongHitting,
+		KnockedBack
 	}
 	State state;
 	Vector2 velocity;
@@ -115,6 +116,11 @@ public class CharController : MonoBehaviour {
 		if (dam != null) dam.ApplyDamage(10);
 	}
 	
+	public void TakeHit(Vector2 knockbackForce) {
+		EnterState(State.KnockedBack);
+		rbody.AddForce(knockbackForce, ForceMode2D.Impulse);
+	}
+	
 	#endregion
 	//--------------------------------------------------------------------------------
 	#region Private Methods
@@ -156,6 +162,11 @@ public class CharController : MonoBehaviour {
 			break;
 		case State.StrongHitting:
 			animator.Play(kStrongHitAnim);
+			break;
+		case State.KnockedBack:
+			Debug.Log("Knocked back!");
+			grounded = false;
+			airJumpsDone = 1;	// don't allow further air jumping at this point
 			break;
 		}
 		
@@ -206,6 +217,9 @@ public class CharController : MonoBehaviour {
 			if (timeInState > 0.4f) EnterState(State.Idle);
 			break;
 			
+		case State.KnockedBack:
+			if (timeInState > 0.5f) EnterState(State.JumpingDown);
+			break;
 		}
 	}
 	
@@ -225,6 +239,8 @@ public class CharController : MonoBehaviour {
 	}
 	
 	void UpdatePhysics() {
+		if (state == State.KnockedBack) return;	// no control while knocked back (stunned)
+		
 		if (grounded) {
 			float targetSpeed = 0;
 			switch (state) {
