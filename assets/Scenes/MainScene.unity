@@ -1386,6 +1386,7 @@ GameObject:
   - 212: {fileID: 124875245}
   - 50: {fileID: 124875247}
   - 61: {fileID: 124875244}
+  - 114: {fileID: 124875248}
   m_Layer: 0
   m_Name: Goat
   m_TagString: Untagged
@@ -1444,7 +1445,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 124875243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: -0.32, z: 0}
+  m_LocalPosition: {x: -0.78, y: -0.31, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1466,6 +1467,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &124875248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 124875243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62bfcb04cdbeade4c8119831d6c21ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &136749128
 GameObject:
   m_ObjectHideFlags: 0
@@ -8049,7 +8061,6 @@ GameObject:
   - 81: {fileID: 1394962362}
   - 114: {fileID: 1394962367}
   - 114: {fileID: 1394962369}
-  - 114: {fileID: 1394962368}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8135,20 +8146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21444ef1757094574ba2acce6ea28b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1394962368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1394962361}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea76b32511054445183ef0e8e533012d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1983750123}
-  offsetX: 0
-  offsetY: 0
 --- !u!114 &1394962369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8163,6 +8160,7 @@ MonoBehaviour:
   targets:
   - {fileID: 1983750123}
   - {fileID: 143182711}
+  - {fileID: 124875243}
   offsetX: 0
   offsetY: 0
 --- !u!1 &1416434846
