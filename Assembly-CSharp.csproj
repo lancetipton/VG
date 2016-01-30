@@ -145,6 +145,7 @@
      <None Include="assets\Ferr\Common\Shaders\UnlitVertexColorTransparent.shader" />
      <None Include="assets\plugins\editor\scriptinspector3\CodeSnippets\namespace.txt" />
      <None Include="assets\Ferr\2DTerrain\Shaders\LitWavyTransparent.shader" />
+     <None Include="assets\mClouds\Compiled-Unlit-Normal-nofog.shader" />
      <None Include="assets\Ferr\Common\Shaders\UnlitSolidColor.shader" />
      <None Include="assets\plugins\editor\scriptinspector3\CodeSnippets\log.txt" />
      <None Include="assets\Standard Assets\Effects\Projectors\Guidelines.txt" />

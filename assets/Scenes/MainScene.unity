@@ -841,6 +841,7 @@ GameObject:
   - 4: {fileID: 32767990}
   - 212: {fileID: 32767991}
   - 68: {fileID: 32767992}
+  - 114: {fileID: 32767993}
   m_Layer: 15
   m_Name: ice_1 (1)
   m_TagString: Spikes
@@ -917,6 +918,19 @@ EdgeCollider2D:
   - {x: 8.327711, y: -4.4199753}
   - {x: 9.477988, y: -1.8461999}
   - {x: 10.152326, y: 3.859747}
+--- !u!114 &32767993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32767989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6f37f88ca5c496aa8cf3ba2b19eab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockLeft: 0
+  knockBackPlayer: 1
 --- !u!1 &38275632
 GameObject:
   m_ObjectHideFlags: 0
@@ -3036,6 +3050,7 @@ GameObject:
   - 4: {fileID: 372678058}
   - 212: {fileID: 372678059}
   - 68: {fileID: 372678060}
+  - 114: {fileID: 372678061}
   m_Layer: 15
   m_Name: ice_2 (2)
   m_TagString: Spikes
@@ -3098,15 +3113,31 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: -5.119999, y: 0}
-  - {x: 1.6929286, y: 3.8058753}
-  - {x: 6.227453, y: 3.8427353}
+  - {x: -2.6478434, y: 5.129278}
+  - {x: -1.4060733, y: 0.39920783}
+  - {x: -0.6284479, y: 4.4321814}
+  - {x: 0.6934408, y: -4.328384}
+  - {x: 1.6930093, y: 5.6479063}
+  - {x: 6.121581, y: 5.7484336}
   - {x: 7.0078883, y: 0.05438887}
   - {x: 8.069056, y: 3.576298}
   - {x: 8.567954, y: -1.4232622}
   - {x: 9.043387, y: -4.6261864}
   - {x: 10.234817, y: -1.1860738}
   - {x: 10.018711, y: 3.8489919}
+--- !u!114 &372678061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 372678057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6f37f88ca5c496aa8cf3ba2b19eab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockLeft: 0
+  knockBackPlayer: 0
 --- !u!1 &392915938
 GameObject:
   m_ObjectHideFlags: 0
