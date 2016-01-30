@@ -4,11 +4,12 @@ using System.Collections.Generic;
 
 public class CharController : MonoBehaviour {
 	#region Public Properties
+	public int playerNum = 1;
 	public float runSpeed = 4;
 	public float acceleration = 20;
 	public float jumpSpeed = 5;
 	public float gravity = 15;
-	public Vector2 influence = new Vector2(5, 5);
+	public Vector2 influence = new Vector2(5, 0.5f);
 	public AudioClip[] sounds;
 	public UnityEngine.UI.Text debugText;
 	public LayerMask groundLayers;
@@ -69,11 +70,12 @@ public class CharController : MonoBehaviour {
 	
 	void Update() {
 		// Gather inputs
-		horzInput = Input.GetAxisRaw("Horizontal");
-		jumpJustPressed = Input.GetButtonDown("Jump");
-		jumpHeld = Input.GetButton("Jump");
-		weakHitPressed = Input.GetButtonDown("WeakHit");
-		strongHitPressed = Input.GetButtonDown("StrongHit");
+		string prefix = "Player " + playerNum + " ";
+		horzInput = Input.GetAxisRaw(prefix + "Horizontal");
+		jumpJustPressed = Input.GetButtonDown(prefix + "Jump");
+		jumpHeld = Input.GetButton(prefix + "Jump");
+		weakHitPressed = Input.GetButtonDown(prefix + "WeakHit");
+		strongHitPressed = Input.GetButtonDown(prefix + "StrongHit");
 		
 		// Update state
 		ContinueState();

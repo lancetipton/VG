@@ -296,12 +296,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f6f12823da64ae89c740b3d965156f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNum: 1
   runSpeed: 4
   acceleration: 20
   jumpSpeed: 5
   gravity: 15
   influence: {x: 5, y: 0.5}
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: 57aa9252007714f6aa77879cf9056ff5, type: 3}
+  - {fileID: 8300000, guid: 2971ba03c8e4e4eef954e57376860134, type: 3}
+  - {fileID: 8300000, guid: 5eab3dc5634fe413c8a6ac17e949d224, type: 3}
+  - {fileID: 8300000, guid: f77233be0fc1e4bc2b6c109f09a85dd2, type: 3}
   debugText: {fileID: 0}
   groundLayers:
     serializedVersion: 2
