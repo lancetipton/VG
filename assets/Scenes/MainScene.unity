@@ -14318,7 +14318,6 @@ MonoBehaviour:
   targets:
   - {fileID: 1983750123}
   - {fileID: 143182711}
-  - {fileID: 124875243}
   offsetX: 0
   offsetY: 0
 --- !u!1 &1416434846
