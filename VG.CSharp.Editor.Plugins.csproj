@@ -185,6 +185,7 @@
     <None Include="assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
     <None Include="assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
     <None Include="assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
+    <None Include="assets\mClouds\Compiled-Unlit-Normal-nofog.shader" />
     <None Include="assets\plugins\editor\scriptinspector3\CodeSnippets\base.txt" />
     <None Include="assets\plugins\editor\scriptinspector3\CodeSnippets\case.txt" />
     <None Include="assets\plugins\editor\scriptinspector3\CodeSnippets\catch.txt" />
