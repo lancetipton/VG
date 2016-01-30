@@ -8,11 +8,13 @@ using System.Collections.Generic;
 
 public class CharDamage : MonoBehaviour {
 	#region Public Properties
-
+	
+	public int damage;
+	
 	#endregion
 	//--------------------------------------------------------------------------------
 	#region Private Properties
-
+	
 	#endregion
 	//--------------------------------------------------------------------------------
 	#region MonoBehaviour Events
@@ -36,6 +38,7 @@ public class CharDamage : MonoBehaviour {
 	/// <param name="damage"></param>
 	public void ApplyDamage(int damage) {
 		Debug.Log(gameObject.name + " takes " + damage + " damage!");
+		this.damage += damage;
 	}
 	
 	/// <summary>
@@ -46,6 +49,7 @@ public class CharDamage : MonoBehaviour {
 	/// <param name="knockback"></param>
 	public void ApplyDamagePlusKnockback(int damage, Vector2 knockback) {
 		Debug.Log(gameObject.name + " takes " + damage + " damage, plus " + knockback + " knockback!");
+		this.damage += damage;
 	}
 	
 	#endregion

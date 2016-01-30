@@ -108,8 +108,11 @@ public class CharController : MonoBehaviour {
 	
 	public void HitObject(GameObject target) {
 		Vector2 force = transform.TransformDirection(Vector3.right);
-		target.GetComponent<Rigidbody2D>().AddForceAtPosition(force, 
+		Rigidbody2D targetRbody = target.GetComponent<Rigidbody2D>();
+		if (targetRbody != null) targetRbody.AddForceAtPosition(force, 
 			hitCollider.transform.position, ForceMode2D.Impulse);
+		CharDamage dam = target.GetComponent<CharDamage>();
+		if (dam != null) dam.ApplyDamage(10);
 	}
 	
 	#endregion
