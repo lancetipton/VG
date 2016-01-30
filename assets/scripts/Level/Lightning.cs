@@ -10,18 +10,13 @@ public class Lightning : MonoBehaviour {
 	int count = 0;
 
 	float strikeTimer;
-	// -23 / 34
+
 	void Awake(){
 		instance = this;
 		strikeTimer = Time.time + Random.Range(1, 5);
 		Flash.SetActive(false);
 	}
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
 	// Update is called once per frame
 	void Update () {
 	    if(strikeTimer <= Time.time){
