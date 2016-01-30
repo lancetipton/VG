@@ -132,6 +132,7 @@ public class CharController : MonoBehaviour {
 	public void Reset() {
 		EnterState(State.Idle);
 		lastVertInput = 0;
+		rbody.velocity = velocity = Vector2.zero;
 		GetComponent<CharDamage>().Reset();
 	}
 	
