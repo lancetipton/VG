@@ -118,7 +118,8 @@ public class CharController : MonoBehaviour {
 	
 	public void TakeHit(Vector2 knockbackForce) {
 		EnterState(State.KnockedBack);
-		rbody.AddForce(knockbackForce, ForceMode2D.Impulse);
+		CharDamage dam = GetComponent<CharDamage>();
+		rbody.AddForce(knockbackForce * dam.knockbackFactor, ForceMode2D.Impulse);
 	}
 	
 	#endregion
