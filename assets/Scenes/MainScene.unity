@@ -9462,161 +9462,17 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 0.24883205
+    - target: {fileID: 11447770, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: playerNum
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.12441602
+    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ShapeModule.radius
-      value: 1.4929923
-      objectReference: {fileID: 0}
-    - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ShapeModule.boxX
-      value: 0.9953282
-      objectReference: {fileID: 0}
-    - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ShapeModule.boxY
-      value: 0.9953282
-      objectReference: {fileID: 0}
-    - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ShapeModule.boxZ
-      value: 0.9953282
-      objectReference: {fileID: 0}
-    - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: VelocityModule.x.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: VelocityModule.y.scalar
-      value: 4.9766407
-      objectReference: {fileID: 0}
-    - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: VelocityModule.z.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ClampVelocityModule.x.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ClampVelocityModule.y.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ClampVelocityModule.z.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ClampVelocityModule.magnitude.scalar
-      value: 1.7418245
-      objectReference: {fileID: 0}
-    - target: {fileID: 19805978, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 0.4976641
-      objectReference: {fileID: 0}
-    - target: {fileID: 19805978, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.4976641
-      objectReference: {fileID: 0}
-    - target: {fileID: 19805978, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ShapeModule.radius
-      value: 0.74649614
-      objectReference: {fileID: 0}
-    - target: {fileID: 19805978, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ShapeModule.boxX
-      value: 0.9953282
-      objectReference: {fileID: 0}
-    - target: {fileID: 19805978, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ShapeModule.boxY
-      value: 0.9953282
-      objectReference: {fileID: 0}
-    - target: {fileID: 19805978, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ShapeModule.boxZ
-      value: 0.9953282
-      objectReference: {fileID: 0}
-    - target: {fileID: 19805978, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: VelocityModule.x.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19805978, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: VelocityModule.y.scalar
-      value: 4.9766407
-      objectReference: {fileID: 0}
-    - target: {fileID: 19805978, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: VelocityModule.z.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19805978, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ClampVelocityModule.x.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19805978, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ClampVelocityModule.y.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19805978, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ClampVelocityModule.z.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19805978, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ClampVelocityModule.magnitude.scalar
-      value: 1.7418245
-      objectReference: {fileID: 0}
-    - target: {fileID: 19811086, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: -0.024883203
-      objectReference: {fileID: 0}
-    - target: {fileID: 19811086, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.74649614
-      objectReference: {fileID: 0}
-    - target: {fileID: 19811086, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ShapeModule.radius
-      value: 0.024883203
-      objectReference: {fileID: 0}
-    - target: {fileID: 19811086, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ShapeModule.boxX
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19811086, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ShapeModule.boxY
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19811086, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ShapeModule.boxZ
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19811086, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ClampVelocityModule.x.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19811086, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ClampVelocityModule.y.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19811086, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ClampVelocityModule.z.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 19811086, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: ClampVelocityModule.magnitude.scalar
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 485368, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 485368, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2.4883204
-      objectReference: {fileID: 0}
-    - target: {fileID: 485368, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2.4883204
+    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
@@ -19421,37 +19277,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 177190, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_Name
-      value: Player 1
-      objectReference: {fileID: 0}
     - target: {fileID: 11447770, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
       propertyPath: debugText
       value: 
       objectReference: {fileID: 2037164993}
-    - target: {fileID: 19989546, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1759528335
-      objectReference: {fileID: 0}
-    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11447770, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: playerNum
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-      propertyPath: m_Color.b
-      value: 1
+    - target: {fileID: 177190, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: m_Name
+      value: Player 1
       objectReference: {fileID: 0}
     - target: {fileID: 19801078, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
       propertyPath: InitialModule.startSpeed.scalar
