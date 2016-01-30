@@ -3,11 +3,17 @@ using System.Collections;
 
 public class RespawnPlayer : MonoBehaviour {
 
+	GameObject new_pos;
 
 	public void RestPos(){
-		print("Reset pos");
-		GameObject new_pos = Respawns.instance.RandomSpawn();
+		new_pos = Respawns.instance.RandomSpawn();
+		Invoke("SetPos", 3f);
+		gameObject.SetActive(false);
+	}
+
+	void SetPos(){
 		transform.position = new_pos.transform.position;
+		gameObject.SetActive(true);
 	}
 
 }
