@@ -61,6 +61,10 @@ public class CharDamage : MonoBehaviour {
 		if (charCtrl != null) charCtrl.TakeHit(knockback);
 	}
 	
+	public void Reset() {
+		damage = 0;
+	}
+	
 	#endregion
 	//--------------------------------------------------------------------------------
 	#region Private Methods
