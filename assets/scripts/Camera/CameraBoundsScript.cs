@@ -9,11 +9,7 @@ public class CameraBoundsScript: MonoBehaviour {
 	public float offsetX;
 	public float offsetY;
 
-	private float posX;
-	private float posY;
-	private float posZ;
-
-	Vector3 startPos;
+	private Vector3 velocity = new Vector3();
 
 	void Update() {
 		// Figure out our bounds and such.
@@ -36,11 +32,25 @@ public class CameraBoundsScript: MonoBehaviour {
 			sizeY = minSize / aspect;
 		}
 		// Set the values.
-		camera.orthographicSize = sizeY;
-		transform.position = new Vector3(bounds.center.x, bounds.center.y, transform.position.z);
+		var current = new Vector3(
+			transform.position.x,
+			transform.position.y,
+			camera.orthographicSize
+		);
+		var goal = new Vector3(
+			bounds.center.x + offsetX,
+			bounds.center.y + offsetY,
+			sizeY
+		);
+		var update = Vector3.SmoothDamp(current, goal, ref velocity, 0.25f);
+		camera.orthographicSize = update.z;
+		transform.position = new Vector3(
+			update.x, update.y, transform.position.z
+		);
 	}
 
 	private static Vector3 getCenter(GameObject obj) {
 		return obj.GetComponent<Renderer>().bounds.center;
     }
+
 }
