@@ -56,6 +56,9 @@ public class CharDamage : MonoBehaviour {
 	public void ApplyDamagePlusKnockback(int damage, Vector2 knockback) {
 		Debug.Log(gameObject.name + " takes " + damage + " damage, plus " + knockback + " knockback!");
 		this.damage += damage;
+		
+		CharController charCtrl = GetComponent<CharController>();
+		if (charCtrl != null) charCtrl.TakeHit(knockback);
 	}
 	
 	#endregion

@@ -9,6 +9,9 @@ TagManager:
   - Spikes
   - Alter
   - Rocks
+  - FxTemporaire
+  - Clouds
+  - Lightning
   layers:
   - Default
   - TransparentFX
@@ -28,8 +31,8 @@ TagManager:
   - Spikes
   - Alter
   - Rocks
-  - 
-  - 
+  - Clouds
+  - Lightning
   - 
   - 
   - 
@@ -46,8 +49,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Lightning
+    uniqueID: 3827723211
+    locked: 0
   - name: Spikes
     uniqueID: 1115202207
+    locked: 0
+  - name: Clouds Back
+    uniqueID: 4183532531
     locked: 0
   - name: Ground
     uniqueID: 1057381199
@@ -69,4 +78,7 @@ TagManager:
     locked: 0
   - name: Alter
     uniqueID: 2774319139
+    locked: 0
+  - name: Clouds Front
+    uniqueID: 2227084285
     locked: 0
