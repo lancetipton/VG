@@ -17,6 +17,8 @@ public class RespawnPlayer : MonoBehaviour {
 
 	void SetPos(){
 		transform.position = new_pos.transform.position;
+		CharController charCtrl = GetComponent<CharController>();
+		if (charCtrl != null) charCtrl.Reset();
 		gameObject.SetActive(true);
 	}
 

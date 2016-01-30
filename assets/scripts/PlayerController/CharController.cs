@@ -57,6 +57,7 @@ public class CharController : MonoBehaviour {
 	
 	int airJumpsDone = 0;
 	Rigidbody2D rbody;
+	float lastVertInput;
 	
 	#endregion
 	//--------------------------------------------------------------------------------
@@ -77,6 +78,12 @@ public class CharController : MonoBehaviour {
 		jumpHeld = Input.GetButton(prefix + "Jump");
 		weakHitPressed = Input.GetButtonDown(prefix + "WeakHit");
 		strongHitPressed = Input.GetButtonDown(prefix + "StrongHit");
+		float vertInput = Input.GetAxisRaw(prefix + "Vertical");
+		if (vertInput > 0.5f) {
+			jumpHeld = true;
+			if (lastVertInput <= 0.5f) jumpJustPressed = true;
+		}
+		lastVertInput = vertInput;
 		
 		// Update state
 		ContinueState();
@@ -120,6 +127,12 @@ public class CharController : MonoBehaviour {
 		EnterState(State.KnockedBack);
 		CharDamage dam = GetComponent<CharDamage>();
 		rbody.AddForce(knockbackForce * dam.knockbackFactor, ForceMode2D.Impulse);
+	}
+	
+	public void Reset() {
+		EnterState(State.Idle);
+		lastVertInput = 0;
+		GetComponent<CharDamage>().Reset();
 	}
 	
 	#endregion
