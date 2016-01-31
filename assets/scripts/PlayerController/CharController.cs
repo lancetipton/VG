@@ -260,8 +260,8 @@ public class CharController : MonoBehaviour {
 			break;
 			
 		case State.Landing:
-			if (timeInState > 0.2f) EnterState(State.Idle);
-			else if (timeInState > 0.1f) RunOrJump();
+			//if (timeInState > 0.2f) EnterState(State.Idle);
+			if (timeInState > 0.2f) RunOrJump();
 			break;
 			
 		case State.WeakHitting:
