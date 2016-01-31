@@ -24,9 +24,14 @@ public class CharController : MonoBehaviour {
 	Vector3 defaultScale;
 	bool grounded;
 	float stateStartTime;
+	float lastGroundedTime;
 	
 	float timeInState {
 		get { return Time.time - stateStartTime; }
+	}
+	
+	float timeUngrounded {
+		get { return Time.time - lastGroundedTime; }
 	}
 
 	const string kIdleAnim = "Idle";
@@ -203,11 +208,13 @@ public class CharController : MonoBehaviour {
 			
 		case State.Idle:
 			RunOrJump();
+			if (timeUngrounded > 0.25f) EnterState(State.JumpingDown);
 			break;
 			
 		case State.RunningLeft:
 		case State.RunningRight:
 			if (!RunOrJump()) EnterState(State.Idle);
+			if (timeUngrounded > 0.25f) EnterState(State.JumpingDown);
 			break;
 			
 		case State.JumpingUp:
@@ -330,6 +337,8 @@ public class CharController : MonoBehaviour {
 		hit = Physics2D.Raycast(foot, Vector2.down, depth, groundLayers);
 		Debug.DrawLine(foot, foot + Vector3.down * depth, hit ? Color.red : Color.green, 0, false);
 		grounded = grounded || hit;
+		
+		if (grounded) lastGroundedTime = Time.time;
 	}
 	#endregion
 }
