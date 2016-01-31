@@ -9,7 +9,8 @@ public class Goat: MonoBehaviour {
 	public GameObject respawn;
 
 	public int lastCarry = 5;
-
+	float nextBleatTime = 0;
+	
 	bool shouldChangeState = false;
 	float stateStartTime;
 	float timeInState {
@@ -44,6 +45,7 @@ public class Goat: MonoBehaviour {
 		var body = GetComponent<Rigidbody2D>();
 		var bounds = GetComponent<Collider2D>().bounds;
 		body.centerOfMass = new Vector2(0, -bounds.extents.y / 2);
+		nextBleatTime = Time.time + Random.Range(5,10);
 	}
 
 	// Update is called once per frame
@@ -58,6 +60,11 @@ public class Goat: MonoBehaviour {
 		hasRight = checkBounds(right, extents);
 		// Now behave.
 		continueState();
+		
+		if (Time.time > nextBleatTime) {
+			//SoundManager.instance.FindFX("baa");
+			nextBleatTime = Time.time + Random.Range(5,15);
+		}
 	}
 
 	private bool checkBounds(Vector3 position, Vector3 extents) {

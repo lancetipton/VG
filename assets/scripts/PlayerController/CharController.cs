@@ -140,6 +140,8 @@ public class CharController : MonoBehaviour {
 		rbody.AddForce(knockbackForce * dam.knockbackFactor, ForceMode2D.Impulse);
 		
 		grabber.DropGoat(new Vector2(-knockbackForce.x/2, knockbackForce.y));
+		
+		SoundManager.instance.FindPlayerFX(playerNum, "grunt");
 	}
 	
 	public void Reset() {
@@ -312,6 +314,7 @@ public class CharController : MonoBehaviour {
 				else throwDir = new Vector3(Mathf.Sign(horzInput), 0.5f, 0);
 				grabber.DropGoat((Vector2)throwDir * 5 + velocity * 2);
 				//animator.Play("Throw");
+				SoundManager.instance.FindPlayerFX(playerNum, "grunt");
 			} else {
 				SetOrKeepState(State.StrongHitting);
 				return true;
