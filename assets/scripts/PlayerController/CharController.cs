@@ -96,9 +96,9 @@ public class CharController : MonoBehaviour {
 		ContinueState();
 		
 		// Debugging
-		debugText.text = "State: " + state + " (" + timeInState + ")"
-			+ "\ngrounded: " + grounded
-			+ "\nvelocity: " + rbody.velocity;
+		//debugText.text = "State: " + state + " (" + timeInState + ")"
+		//	+ "\ngrounded: " + grounded
+		//	+ "\nvelocity: " + rbody.velocity;
 	}
 	
 	void LateUpdate() {
@@ -149,6 +149,28 @@ public class CharController : MonoBehaviour {
 	}
 	
 	public void GoatDropped() {
+	}
+	
+	/// <summary>
+	/// This method can be invoked from an animation event at the end of an animation,
+	/// so we know it's time to transition to the next state.  Applies mainly to attacks.
+	/// </summary>
+	public void AnimationEnded() {
+		switch (state) {
+		case State.Landing:
+		case State.WeakHitting:
+		case State.StrongHitting:
+			EnterState(State.Idle);
+			break;
+		}
+	}
+	
+	public void ActivateStriker() {
+		striker.gameObject.SetActive(true);
+	}
+	
+	public void DeactivateStriker() {
+		striker.gameObject.SetActive(false);
 	}
 	
 	#endregion
@@ -243,13 +265,11 @@ public class CharController : MonoBehaviour {
 			break;
 			
 		case State.WeakHitting:
-			striker.gameObject.SetActive(timeInState > 0.05f && timeInState < 0.15f);
-			if (timeInState > 0.2f) EnterState(State.Idle);
+			if (timeInState > 1f) EnterState(State.Idle);
 			break;
 			
 		case State.StrongHitting:
-			striker.gameObject.SetActive(timeInState > 0.15f && timeInState < 0.33f);
-			if (timeInState > 0.4f) EnterState(State.Idle);
+			if (timeInState > 1f) EnterState(State.Idle);
 			break;
 			
 		case State.KnockedBack:
