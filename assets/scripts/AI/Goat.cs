@@ -23,6 +23,11 @@ public class Goat: MonoBehaviour {
 	bool hasLeft;
 	bool hasRight;
 
+	public void Respawn() {
+		gameObject.SetActive(false);
+		Invoke("doRespawn", 3f);
+	}
+
 	void Start() {
 		enterState(State.Idle);
 		// Put the center of gravity down a bit.
@@ -96,6 +101,13 @@ public class Goat: MonoBehaviour {
 				//setVelocity(0);
                 break;
 		}
+	}
+
+	void doRespawn() {
+		// Respawn 0 is the goat respawn.
+		// TODO Maybe make it clearer than that???
+		transform.position = Respawns.instance.ResData[0].transform.position;
+		gameObject.SetActive(true);
 	}
 
 	void enterState(State state) {
