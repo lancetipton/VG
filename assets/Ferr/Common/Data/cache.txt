@@ -1,11 +1,11 @@
 
 [Ferr2DT_TerrainMaterial]
-assets/Ferr/2DTerrain/TerrainMaterials/ForestTerrainMaterial.prefab
-assets/Ferr/2DTerrain/TerrainMaterials/MossyTerrainMaterial.prefab
 assets/Ferr/2DTerrain/TerrainMaterials/RockTerrainMaterial.prefab
 assets/Ferr/2DTerrain/TerrainMaterials/PipeMaterial.prefab
 assets/Ferr/2DTerrain/TerrainMaterials/CaveTerrainMaterial.prefab
 assets/Ferr/2DTerrain/TerrainMaterials/ForegroundTerrainMaterial.prefab
+assets/Ferr/2DTerrain/TerrainMaterials/ForestTerrainMaterial.prefab
+assets/Ferr/2DTerrain/TerrainMaterials/MossyTerrainMaterial.prefab
 assets/Ferr/2DTerrain/TerrainMaterials/SandTerrainMaterial.prefab
 
 [Ferr2DT_PathTerrain]

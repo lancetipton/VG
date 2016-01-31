@@ -287,7 +287,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.882, y: -1.56, z: 0}
+  m_LocalPosition: {x: 1.882, y: -1.56, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 463494}
@@ -522,20 +522,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 22
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Player 1
-
-'
+  m_Text: P2
 --- !u!114 &11447770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -547,7 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f6f12823da64ae89c740b3d965156f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 1
+  playerNum: 2
   runSpeed: 4
   acceleration: 20
   jumpSpeed: 5
@@ -562,7 +560,7 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 217600
-  hitCollider: {fileID: 126158}
+  striker: {fileID: 11460502}
 --- !u!114 &11448124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -628,8 +626,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc3f4ecf019024617b20424cd602cd03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 10
-  knockbackValue: 2
+  weakDamageValue: 5
+  weakKnockbackValue: 1
+  strongDamageValue: 15
+  strongKnockbackValue: 2
+  hitEffect: {fileID: 0}
 --- !u!114 &11466124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5199,7 +5200,7 @@ SpriteRenderer:
   m_SortingLayerID: 1759528335
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300066, guid: 27896b2effdef4e57836909131c51b60, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!222 &22217166
@@ -5247,8 +5248,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 40}
+  m_AnchoredPosition: {x: -10.56, y: 0}
+  m_SizeDelta: {x: 57.76, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22427946
 RectTransform:
@@ -5280,10 +5281,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22427174}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.39999962, y: 4.6249638}
+  m_SizeDelta: {x: -14.699997, y: -9.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &100100000
 Prefab:
@@ -5328,6 +5329,10 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: striker
+      value: 
+      objectReference: {fileID: 11460502}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 177190}

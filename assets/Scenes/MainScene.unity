@@ -1480,6 +1480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 0.7
   minStateTime: 0.5
+  respawn: {fileID: 0}
   lastCarry: 5
 --- !u!1 &136749128
 GameObject:
@@ -19365,6 +19366,22 @@ Prefab:
       propertyPath: follow
       value: 
       objectReference: {fileID: 392770801}
+    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21282480, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11447770, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: playerNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413886, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: m_Text
+      value: P1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11475082, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
