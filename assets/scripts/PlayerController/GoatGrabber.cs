@@ -69,6 +69,7 @@ public class GoatGrabber : MonoBehaviour {
 		onGoatGrabbed.Invoke();
 		CharController player = GetComponentInParent<CharController>();
 		Goat.instance.lastCarry = player.playerNum;
+		Alter.instance.CancelWin();
 	}
 	
 	#endregion

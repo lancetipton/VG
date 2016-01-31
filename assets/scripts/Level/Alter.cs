@@ -6,20 +6,39 @@ public class Alter : MonoBehaviour {
 
 	public ParticleSystem skybeams;
 	public ParticleSystem alterFx;
+	CameraBoundsScript camBounds;
+	
+	public static Alter instance;
+	
+	void Awake() {
+		instance = this;
+	}
+	
+	void Start() {
+		camBounds = Camera.main.GetComponent<CameraBoundsScript>();
+	}
 
 	void OnTriggerEnter2D(Collider2D coll) {
 		if(coll.gameObject.tag == "Goat"){
+			camBounds.FocusOnAltar(alterFx.transform.position);
 			Invoke("Winround", 3f);
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D coll) {
 		if(coll.gameObject.tag == "Goat"){
-			CancelInvoke("Winround");
+			Debug.Log("Trigger exit - canceling");
+			CancelWin();
 		}
 	}
-
+	
+	public void CancelWin() {
+		camBounds.CancelFocusOnAltar();
+		CancelInvoke("Winround");		
+	}
+	
 	void Winround(){
+		camBounds.CancelFocusOnAltar();
 		skybeams.Play();
 		alterFx.Stop();
 		WinRound.instance.ShowWinner();	

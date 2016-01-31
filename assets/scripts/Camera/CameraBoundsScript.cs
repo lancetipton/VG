@@ -10,6 +10,11 @@ public class CameraBoundsScript: MonoBehaviour {
 	private GameObject[] targets;
 
 	private Vector3 velocity = new Vector3();
+	
+	// Properties that control focusing on the altar near the end of a game.
+	float altarFocus = 0;
+	Vector3 altarPos;
+	bool focusingOnAltar;
 
 	void Start() {
 		targets = GameObject.FindGameObjectsWithTag("Players");
@@ -31,6 +36,7 @@ public class CameraBoundsScript: MonoBehaviour {
 			}
 		}
 		var camera = GetComponent<Camera>();
+		
 		// Make sure we are showing enough in both dimensions.
 		var scale = 1.5f;
 		var minSize = 4f;
@@ -41,7 +47,8 @@ public class CameraBoundsScript: MonoBehaviour {
 			sizeY = scale * bounds.extents.x / aspect;
         } else if (sizeX < minSize) {
 			sizeY = minSize / aspect;
-		}
+        }
+		
 		// Set the values.
 		var current = new Vector3(
 			transform.position.x,
@@ -53,13 +60,35 @@ public class CameraBoundsScript: MonoBehaviour {
 			bounds.center.y + offsetY,
 			sizeY
 		);
+		
+		ApplyAltarFocus(ref goal);
+		
 		var update = Vector3.SmoothDamp(current, goal, ref velocity, 0.25f);
 		camera.orthographicSize = update.z;
 		transform.position = new Vector3(
 			update.x, update.y, transform.position.z
 		);
 	}
-
+	
+	public void FocusOnAltar(Vector3 position) {
+		altarPos = position;
+		focusingOnAltar = true;
+	}
+	
+	public void CancelFocusOnAltar() {
+		focusingOnAltar = false;
+	}
+	
+	public void ApplyAltarFocus(ref Vector3 goalPosAndSize) {
+		if (focusingOnAltar) altarFocus = Mathf.MoveTowards(altarFocus, 1, 0.3f * Time.deltaTime);
+		else altarFocus = Mathf.MoveTowards(altarFocus, 0, 0.3f * Time.deltaTime);
+		if (altarFocus > 0) {
+			Vector3 endPosAndSize = altarPos;
+			endPosAndSize.z = 4;
+			goalPosAndSize = goalPosAndSize * (1 - altarFocus) + endPosAndSize * altarFocus;
+		}
+	}
+	
 	private static Vector3 getCenter(GameObject obj) {
 		return obj.GetComponent<Renderer>().bounds.center;
     }
