@@ -273,7 +273,7 @@ public class CharController : MonoBehaviour {
 				Vector3 throwDir;
 				if (horzInput == 0) throwDir = Vector3.up;
 				else throwDir = new Vector3(Mathf.Sign(horzInput), 0.5f, 0);
-				grabber.DropGoat(((Vector2)throwDir + velocity) * 5);
+				grabber.DropGoat((Vector2)throwDir * 5 + velocity * 2);
 			} else {
 				SetOrKeepState(State.StrongHitting);
 				return true;
