@@ -11,6 +11,8 @@ public class SoundManager : MonoBehaviour {
 
 
 	public AudioClip[] Music = new AudioClip[2];
+	public AudioClip[] Hit = new AudioClip[4];
+	public AudioClip[] Foot = new AudioClip[7];
 	public AudioClip[] soundFx = new AudioClip[30];
 	public AudioClip[] Thund = new AudioClip[4];
 
@@ -33,23 +35,38 @@ public class SoundManager : MonoBehaviour {
 
 	public void FindPlayerFX(int playerNum, string fx){
 
-		if(fx == "jump"){
-
+		if(fx == "spawn"){
+			PlayFX(playerNum, 0);
 		}
 		else if(fx == "swing"){
-
+			PlayFX(playerNum, 1);
 		}
 		else if(fx == "hit"){
-
+			int num = Random.Range(0, 3);
+			FxPlayer[playerNum].PlayOneShot(Hit[num]);
+		}
+		else if(fx == "jump"){
+			if(playerNum == 3){
+				PlayFX(playerNum, 3);
+			}
+			else{
+				PlayFX(playerNum, 4);	
+			}
 		}
 		else if(fx == "pick-up"){
-
+			PlayFX(playerNum, 5);
 		}
 		else if(fx == "grunt"){
-
+			int num = Random.Range(6, 8);
+			PlayFX(playerNum, num);
 		}
-		else if(fx == "spawn"){
-			PlayFX(playerNum, 0);
+		else if(fx == "foot1"){
+			int num = Random.Range(0, 6);
+			FxPlayer[playerNum].PlayOneShot(Foot[num]);
+		}
+		else if(fx == "foot2"){
+			int num = Random.Range(0, 6);
+			FxPlayer[playerNum].PlayOneShot(Foot[num]);
 		}
 	}
 
