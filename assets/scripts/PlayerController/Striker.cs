@@ -55,7 +55,7 @@ public class Striker : MonoBehaviour {
 			Rigidbody2D targetRbody = other.GetComponentInParent<Rigidbody2D>();
 			if (targetRbody != null) targetRbody.AddForce(force, ForceMode2D.Impulse);
 		}
-		SoundManager.instance.FindPlayerFX(GetComponent<CharController>().playerNum, "hit");
+		SoundManager.instance.FindPlayerFX(GetComponentInParent<CharController>().playerNum, "hit");
 			
 		if (hitEffect != null) {
 			hitEffect.transform.position = transform.position;
