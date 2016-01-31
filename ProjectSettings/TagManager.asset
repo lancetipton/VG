@@ -12,6 +12,7 @@ TagManager:
   - FxTemporaire
   - Clouds
   - Lightning
+  - Goat
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - Rocks
   - Clouds
   - Lightning
-  - 
+  - Goat
   - 
   - 
   - 

@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &104146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22427946}
+  - 223: {fileID: 22338742}
+  - 114: {fileID: 11473880}
+  - 114: {fileID: 11481774}
+  m_Layer: 10
+  m_Name: Indicator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &104700
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,6 +34,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &120912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 422086}
+  - 61: {fileID: 6192378}
+  - 114: {fileID: 11498434}
+  m_Layer: 10
+  m_Name: GoatGrabber
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &126158
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,6 +101,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &147010
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22427174}
+  - 114: {fileID: 11475082}
+  - 222: {fileID: 22298656}
+  - 114: {fileID: 11448124}
+  m_Layer: 5
+  m_Name: Indicator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &177156
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +177,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &422086
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.591, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 498288}
+  m_RootOrder: 5
 --- !u!4 &432710
 Transform:
   m_ObjectHideFlags: 1
@@ -168,7 +233,7 @@ Transform:
   m_GameObject: {fileID: 177156}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.022, y: 0.293, z: 0}
-  m_LocalScale: {x: 1.7280002, y: 1.7280002, z: 1.7280002}
+  m_LocalScale: {x: 2.9859846, y: 2.9859846, z: 2.9859846}
   m_Children:
   - {fileID: 497014}
   - {fileID: 452932}
@@ -212,6 +277,8 @@ Transform:
   - {fileID: 487666}
   - {fileID: 432710}
   - {fileID: 485368}
+  - {fileID: 22427946}
+  - {fileID: 422086}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!50 &5065382
@@ -297,6 +364,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.25}
   serializedVersion: 2
   m_Size: {x: 0.45, y: 0.49}
+--- !u!61 &6192378
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120912}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.009106994, y: -0.18213975}
+  serializedVersion: 2
+  m_Size: {x: 0.4457751, y: 0.6357205}
 --- !u!82 &8239484
 AudioSource:
   m_ObjectHideFlags: 1
@@ -430,6 +511,33 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 217600
   hitCollider: {fileID: 126158}
+--- !u!114 &11448124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 1533166c859a34997bdeaf578d672fce, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &11456446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -467,6 +575,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+--- !u!114 &11473880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!114 &11475082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593c181d121264b09b176ecb7ad699a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 498288}
+  active: 1
+  offset: 3
+--- !u!114 &11481774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &11498434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3938a0875244295a21b0b3c7574bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onGoatGrabbed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  onGoatDropped:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!198 &19801078
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -546,7 +726,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 3
     startSpeed:
-      scalar: 0.17280002
+      scalar: 0.29859847
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -675,7 +855,7 @@ ParticleSystem:
         rgba: 1862252685
       minMaxState: 0
     startSize:
-      scalar: 0.08640001
+      scalar: 0.14929923
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -802,12 +982,12 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 1
-    radius: 1.0368001
+    radius: 1.7915908
     angle: 0
     length: 0.2
-    boxX: 0.6912001
-    boxY: 0.6912001
-    boxZ: 0.6912001
+    boxX: 1.1943939
+    boxY: 1.1943939
+    boxZ: 1.1943939
     arc: 360
     placementMode: 0
     m_Mesh: {fileID: 0}
@@ -1152,7 +1332,7 @@ ParticleSystem:
   VelocityModule:
     enabled: 0
     x:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1177,7 +1357,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 3
     y:
-      scalar: 3.4560003
+      scalar: 5.971969
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1202,7 +1382,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 3
     z:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1380,7 +1560,7 @@ ParticleSystem:
   ClampVelocityModule:
     enabled: 0
     x:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1415,7 +1595,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     y:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1450,7 +1630,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     z:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1485,7 +1665,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     magnitude:
-      scalar: 1.2096002
+      scalar: 2.0901895
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1980,7 +2160,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 3
     startSpeed:
-      scalar: 0.34560004
+      scalar: 0.59719694
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2109,7 +2289,7 @@ ParticleSystem:
         rgba: 1862252685
       minMaxState: 0
     startSize:
-      scalar: 0.34560004
+      scalar: 0.59719694
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2236,12 +2416,12 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 0
-    radius: 0.5184001
+    radius: 0.8957954
     angle: 0
     length: 0.2
-    boxX: 0.6912001
-    boxY: 0.6912001
-    boxZ: 0.6912001
+    boxX: 1.1943939
+    boxY: 1.1943939
+    boxZ: 1.1943939
     arc: 360
     placementMode: 0
     m_Mesh: {fileID: 0}
@@ -2586,7 +2766,7 @@ ParticleSystem:
   VelocityModule:
     enabled: 0
     x:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2611,7 +2791,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 3
     y:
-      scalar: 3.4560003
+      scalar: 5.971969
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2636,7 +2816,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 3
     z:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2814,7 +2994,7 @@ ParticleSystem:
   ClampVelocityModule:
     enabled: 0
     x:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2849,7 +3029,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     y:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2884,7 +3064,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     z:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2919,7 +3099,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     magnitude:
-      scalar: 1.2096002
+      scalar: 2.0901895
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3424,7 +3604,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startSpeed:
-      scalar: -0.017280001
+      scalar: -0.029859845
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3553,7 +3733,7 @@ ParticleSystem:
         rgba: 1862245203
       minMaxState: 0
     startSize:
-      scalar: 0.5184001
+      scalar: 0.8957954
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3680,12 +3860,12 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 1
-    radius: 0.017280001
+    radius: 0.029859845
     angle: 0
     length: 5
-    boxX: 1.7280002
-    boxY: 1.7280002
-    boxZ: 1.7280002
+    boxX: 2.9859846
+    boxY: 2.9859846
+    boxZ: 2.9859846
     arc: 360
     placementMode: 2
     m_Mesh: {fileID: 0}
@@ -4293,7 +4473,7 @@ ParticleSystem:
   ClampVelocityModule:
     enabled: 0
     x:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4328,7 +4508,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     y:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4363,7 +4543,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     z:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4398,7 +4578,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     magnitude:
-      scalar: 1.7280002
+      scalar: 2.9859846
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4967,6 +5147,65 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!222 &22298656
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147010}
+--- !u!223 &22338742
+Canvas:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104146}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &22427174
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22427946}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -244.55899, y: -128.47}
+  m_SizeDelta: {x: 100, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &22427946
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 22427174}
+  m_Father: {fileID: 498288}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -5005,6 +5244,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -20,6 +20,7 @@ public class CharController : MonoBehaviour {
 	#region Private Properties
 	Animator animator;
 	AudioSource audioSource;
+	GoatGrabber grabber;
 	Vector3 defaultScale;
 	bool grounded;
 	float stateStartTime;
@@ -66,6 +67,7 @@ public class CharController : MonoBehaviour {
 		animator = GetComponent<Animator>();
 		audioSource = GetComponent<AudioSource>();
 		rbody = GetComponent<Rigidbody2D>();
+		grabber = GetComponentInChildren<GoatGrabber>();
 		defaultScale = transform.localScale;
 		rbody.isKinematic = false;
 	}
@@ -127,6 +129,8 @@ public class CharController : MonoBehaviour {
 		EnterState(State.KnockedBack);
 		CharDamage dam = GetComponent<CharDamage>();
 		rbody.AddForce(knockbackForce * dam.knockbackFactor, ForceMode2D.Impulse);
+		
+		grabber.DropGoat(new Vector2(-knockbackForce.x/2, knockbackForce.y));
 	}
 	
 	public void Reset() {
@@ -134,6 +138,12 @@ public class CharController : MonoBehaviour {
 		lastVertInput = 0;
 		rbody.velocity = velocity = Vector2.zero;
 		GetComponent<CharDamage>().Reset();
+	}
+	
+	public void GoatGrabbed() {
+	}
+	
+	public void GoatDropped() {
 	}
 	
 	#endregion
@@ -179,7 +189,6 @@ public class CharController : MonoBehaviour {
 			animator.Play(kStrongHitAnim);
 			break;
 		case State.KnockedBack:
-			Debug.Log("Knocked back!");
 			grounded = false;
 			airJumpsDone = 1;	// don't allow further air jumping at this point
 			break;
@@ -236,13 +245,14 @@ public class CharController : MonoBehaviour {
 			velocity = rbody.velocity;
 			if (timeInState > 0.5f) EnterState(State.JumpingDown);
 			break;
+			
 		}
 	}
 	
 	bool RunOrJump() {
 		if (jumpJustPressed && grounded) SetOrKeepState(State.JumpingUp);
-		else if (weakHitPressed && grounded) SetOrKeepState(State.WeakHitting);
-		else if (strongHitPressed && grounded) SetOrKeepState(State.StrongHitting);
+		else if (weakHitPressed && grounded && !grabber.carrying) SetOrKeepState(State.WeakHitting);
+		else if (strongHitPressed && grounded && !grabber.carrying) SetOrKeepState(State.StrongHitting);
 		else if (horzInput < 0) SetOrKeepState(State.RunningLeft);
 		else if (horzInput > 0) SetOrKeepState(State.RunningRight);
 		else return false;
