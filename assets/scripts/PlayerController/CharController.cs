@@ -165,6 +165,14 @@ public class CharController : MonoBehaviour {
 		}
 	}
 	
+	public void ActivateStriker() {
+		striker.gameObject.SetActive(true);
+	}
+	
+	public void DeactivateStriker() {
+		striker.gameObject.SetActive(false);
+	}
+	
 	#endregion
 	//--------------------------------------------------------------------------------
 	#region Private Methods
@@ -257,12 +265,10 @@ public class CharController : MonoBehaviour {
 			break;
 			
 		case State.WeakHitting:
-			striker.gameObject.SetActive(timeInState > 0.05f && timeInState < 0.15f);
 			if (timeInState > 1f) EnterState(State.Idle);
 			break;
 			
 		case State.StrongHitting:
-			striker.gameObject.SetActive(timeInState > 0.15f && timeInState < 0.33f);
 			if (timeInState > 1f) EnterState(State.Idle);
 			break;
 			
