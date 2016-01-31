@@ -188,25 +188,25 @@ public class CharController : MonoBehaviour {
 		ExitState();
 		switch (state) {
 		case State.Idle:
-			animator.Play(kIdleAnim);
+			animator.Play(kIdleAnim + (grabber.carrying ? "_Carry" : null));
 			break;
 		case State.RunningLeft:
-			animator.Play(kRunAnim);
+			animator.Play(kRunAnim + (grabber.carrying ? "_Carry" : null));
 			Face(-1);
 			break;
 		case State.RunningRight:
-			animator.Play(kRunAnim);
+			animator.Play(kRunAnim + (grabber.carrying ? "_Carry" : null));
 			Face(1);
 			break;
 		case State.JumpingUp:
-			animator.Play(kJumpStartAnim);
+			animator.Play(kJumpStartAnim + (grabber.carrying ? "_Carry" : null));
 			rbody.AddRelativeForce(new Vector2(0f, jumpSpeed), ForceMode2D.Impulse);
 			break;
 		case State.JumpingDown:
-			animator.Play(kJumpFallAnim);
+			animator.Play(grabber.carrying ? "Jump_Carry" : kJumpFallAnim);
 			break;
 		case State.Landing:
-			animator.Play(kJumpLandAnim);
+			animator.Play(kJumpLandAnim + (grabber.carrying ? "_Carry" : null));
 			airJumpsDone = 0;
 			break;
 		case State.WeakHitting:
@@ -260,8 +260,8 @@ public class CharController : MonoBehaviour {
 			break;
 			
 		case State.Landing:
-			if (timeInState > 0.2f) EnterState(State.Idle);
-			else if (timeInState > 0.1f) RunOrJump();
+			//if (timeInState > 0.2f) EnterState(State.Idle);
+			if (timeInState > 0.2f) RunOrJump();
 			break;
 			
 		case State.WeakHitting:
