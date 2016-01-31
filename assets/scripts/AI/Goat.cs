@@ -115,6 +115,7 @@ public class Goat: MonoBehaviour {
 
 	void doRespawn() {
 		transform.position = respawn.transform.position;
+		transform.rotation = Quaternion.identity;
 		gameObject.SetActive(true);
 	}
 

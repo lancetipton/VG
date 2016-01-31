@@ -43,7 +43,7 @@ public class CharDamage : MonoBehaviour {
 	/// </summary>
 	/// <param name="damage"></param>
 	public void ApplyDamage(int damage) {
-		Debug.Log(gameObject.name + " takes " + damage + " damage!");
+		//Debug.Log(gameObject.name + " takes " + damage + " damage!");
 		this.damage += damage;
 	}
 	
