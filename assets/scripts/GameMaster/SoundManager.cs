@@ -47,17 +47,18 @@ public class SoundManager : MonoBehaviour {
 		}
 		else if(fx == "jump"){
 			if(playerNum == 3){
-				PlayFX(playerNum, 3);
+				PlayFX(playerNum, 2);
 			}
 			else{
-				PlayFX(playerNum, 4);	
+				print("here");
+				PlayFX(playerNum, 3);	
 			}
 		}
 		else if(fx == "pick-up"){
-			PlayFX(playerNum, 5);
+			PlayFX(playerNum, 4);
 		}
 		else if(fx == "grunt"){
-			int num = Random.Range(6, 8);
+			int num = Random.Range(5, 7);
 			PlayFX(playerNum, num);
 		}
 		else if(fx == "foot1"){
@@ -77,7 +78,7 @@ public class SoundManager : MonoBehaviour {
 
 	public void PlayMusic(int type){
 		MusicPlayer.clip = Music[type];
-		MusicPlayer.volume = 0.2f;
+		MusicPlayer.volume = 0.1f;
 		MusicPlayer.Play();
 	}
 
