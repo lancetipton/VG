@@ -19,10 +19,10 @@ public class Alter : MonoBehaviour {
 		}
 	}
 
-
 	void Winround(){
 		skybeams.Play();
 		alterFx.Stop();
+		WinRound.instance.ShowWinner();	
 		Invoke("RestartGame", 4f);
 	}
 
