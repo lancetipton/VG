@@ -35,6 +35,7 @@ public class Lightning : MonoBehaviour {
 		float pos = Random.Range(-23f, 34);
 		Strikes[number].transform.position = new Vector3(transform.position.x + pos, transform.position.y, transform.position.z);
 		Strikes[number].Play();
+		SoundManager.instance.PlayThunder();
 	}
 
 	void PlayFlash(){

@@ -4,7 +4,7 @@ using System.Collections;
 public class GameMaster : MonoBehaviour {
 
 	public static GameMaster instance;
-	
+
 	void Awake(){
 
 		if(instance == null)
@@ -18,13 +18,5 @@ public class GameMaster : MonoBehaviour {
 
 	}
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }

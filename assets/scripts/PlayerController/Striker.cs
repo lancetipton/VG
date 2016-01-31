@@ -38,7 +38,7 @@ public class Striker : MonoBehaviour {
 	}
 	
 	protected void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log(gameObject.name + " hits " + other.name);
+		//Debug.Log(gameObject.name + " hits " + other.name);
 		
 		// Calculate the force to apply
 		Vector2 force = transform.TransformVector(Vector3.right);

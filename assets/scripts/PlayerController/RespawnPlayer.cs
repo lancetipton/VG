@@ -39,6 +39,7 @@ public class RespawnPlayer : MonoBehaviour {
 		transform.position = new_pos.transform.position;
 		followScript.gameObject.SetActive(true);
 		followScript.active = true;
+		SoundManager.instance.FindPlayerFX(1, "spawn");
 		CharController charCtrl = GetComponent<CharController>();
 		if (charCtrl != null) charCtrl.Reset();
 		gameObject.SetActive(true);
