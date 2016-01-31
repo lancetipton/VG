@@ -111,7 +111,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4029094}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &4029093
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,11 +138,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 603017452}
   - {fileID: 701140527}
   - {fileID: 1433808}
   - {fileID: 1089238761}
   - {fileID: 1071826846}
-  - {fileID: 603017452}
   - {fileID: 1245798158}
   - {fileID: 105854927}
   - {fileID: 1173044373}
@@ -160,11 +160,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ResData:
-  - {fileID: 701140526}
+  - {fileID: 603017451}
   - {fileID: 1433807}
   - {fileID: 1089238760}
   - {fileID: 1071826845}
-  - {fileID: 603017451}
+  - {fileID: 701140526}
   - {fileID: 1245798157}
   - {fileID: 105854926}
   - {fileID: 1173044372}
@@ -1387,7 +1387,7 @@ GameObject:
   - 50: {fileID: 124875247}
   - 61: {fileID: 124875244}
   - 114: {fileID: 124875248}
-  m_Layer: 20
+  m_Layer: 12
   m_Name: Goat
   m_TagString: Goat
   m_Icon: {fileID: 0}
@@ -1538,10 +1538,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1033501829}
   m_RootOrder: 48
---- !u!1 &143182711 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 177190, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-  m_PrefabInternal: {fileID: 786456274}
 --- !u!1 &144941942
 GameObject:
   m_ObjectHideFlags: 0
@@ -8574,7 +8570,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 603017452}
   m_Layer: 0
-  m_Name: Respawn (4)
+  m_Name: Respawn Goat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8591,7 +8587,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4029094}
-  m_RootOrder: 4
+  m_RootOrder: 0
 --- !u!1 &611353175
 GameObject:
   m_ObjectHideFlags: 0
@@ -9234,7 +9230,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4029094}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &705787491
 GameObject:
   m_ObjectHideFlags: 0
@@ -11243,7 +11239,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4029094}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &1074640361
 GameObject:
   m_ObjectHideFlags: 0
@@ -11378,7 +11374,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4029094}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1099256742
 GameObject:
   m_ObjectHideFlags: 0
@@ -11448,7 +11444,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1099256742}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 325fedfb623b59144bb3d7aec35031d5, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: -0.4, y: -1}
@@ -13332,7 +13328,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173044372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.23, y: 19.61, z: 0}
+  m_LocalPosition: {x: -17.09, y: -0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4029094}
@@ -14345,9 +14341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f6ccd7b1913c2468339198abb59e54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets:
-  - {fileID: 1983750123}
-  - {fileID: 143182711}
   offsetX: 0
   offsetY: 0
 --- !u!1 &1416434846
@@ -22117,10 +22110,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1 &1983750123 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 177190, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
-  m_PrefabInternal: {fileID: 1672474221}
 --- !u!114 &1983750124 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11466124, guid: d4fa09f2002fc476bb946eb11c8699d2,
