@@ -6,6 +6,7 @@ public class SoundManager : MonoBehaviour {
 	public static SoundManager instance;
 	public AudioSource MusicPlayer;
 	public AudioSource BGPlayer;
+	public AudioSource GoatPlayer;
 	public AudioSource ThunderPlayer;
 	public AudioSource[] FxPlayer = new AudioSource[4];
 
@@ -13,6 +14,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioClip[] Music = new AudioClip[2];
 	public AudioClip[] Hit = new AudioClip[4];
 	public AudioClip[] Foot = new AudioClip[7];
+	public AudioClip[] Goat = new AudioClip[7];
 	public AudioClip[] soundFx = new AudioClip[30];
 	public AudioClip[] Thund = new AudioClip[4];
 
@@ -28,8 +30,11 @@ public class SoundManager : MonoBehaviour {
 		}
 	}
 
-	public void FindFX(){
-
+	public void FindFX(string type){
+		if(type == "baa"){
+			int num = Random.Range(0, 6);
+			GoatPlayer.PlayOneShot(Goat[num]);
+		}
 	}
 
 

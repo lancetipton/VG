@@ -16,6 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &114822
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 448326}
+  - 82: {fileID: 8293956}
+  m_Layer: 0
+  m_Name: Goat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &126250
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,8 +153,21 @@ Transform:
   - {fileID: 458302}
   - {fileID: 498884}
   - {fileID: 405706}
+  - {fileID: 448326}
   m_Father: {fileID: 456520}
   m_RootOrder: 0
+--- !u!4 &448326
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114822}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 436558}
+  m_RootOrder: 4
 --- !u!4 &456520
 Transform:
   m_ObjectHideFlags: 1
@@ -187,7 +216,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -227,7 +256,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -249,7 +278,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &8232852
 AudioSource:
   m_ObjectHideFlags: 1
@@ -483,7 +512,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -523,7 +552,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -545,7 +574,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &8281938
 AudioSource:
   m_ObjectHideFlags: 1
@@ -557,7 +586,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -597,7 +626,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -619,7 +648,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &8285072
 AudioSource:
   m_ObjectHideFlags: 1
@@ -630,6 +659,80 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &8293956
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114822}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c8d2c5d0007df482aa0e845ddbdc9368, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -671,7 +774,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -693,7 +796,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &11422402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -718,6 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MusicPlayer: {fileID: 8232852}
   BGPlayer: {fileID: 8254886}
+  GoatPlayer: {fileID: 8293956}
   ThunderPlayer: {fileID: 8274442}
   FxPlayer:
   - {fileID: 8285072}
@@ -727,15 +831,36 @@ MonoBehaviour:
   Music:
   - {fileID: 8300000, guid: bb42e5a4451d3432eb210c81258fe94d, type: 3}
   - {fileID: 8300000, guid: bb42e5a4451d3432eb210c81258fe94d, type: 3}
+  Hit:
+  - {fileID: 8300000, guid: c061bce9a79c142c689afcd61c845943, type: 3}
+  - {fileID: 8300000, guid: e38ba087afec54786b18116277f0c682, type: 3}
+  - {fileID: 8300000, guid: 4f6364e929f3142629797a3e35d702fd, type: 3}
+  - {fileID: 8300000, guid: 5d2aab86328604bab887a97d0dbe6eea, type: 3}
+  Foot:
+  - {fileID: 8300000, guid: 6f469be5929f0414e9ede92820401b90, type: 3}
+  - {fileID: 8300000, guid: 4fc49898d5210449cb56469a32ef46a6, type: 3}
+  - {fileID: 8300000, guid: 8ad8f01e461fa45fd9f6c1778381d4c5, type: 3}
+  - {fileID: 8300000, guid: 4b0f876372db1402c9a0d4665f43ff5a, type: 3}
+  - {fileID: 8300000, guid: 2b8cb798288e84a319fdd5a46dd6142c, type: 3}
+  - {fileID: 8300000, guid: 44d19886ed71248a4984899be93aaf93, type: 3}
+  - {fileID: 8300000, guid: 3ddc9333091c84da5869adf818656db4, type: 3}
+  Goat:
+  - {fileID: 8300000, guid: c8d2c5d0007df482aa0e845ddbdc9368, type: 3}
+  - {fileID: 8300000, guid: b3ffb05c8a81a4cd6a4f04755c513f07, type: 3}
+  - {fileID: 8300000, guid: 0477087e622704226985e81e9161e4cc, type: 3}
+  - {fileID: 8300000, guid: 1029c9f9f1c124af4bb2b4d413905b5c, type: 3}
+  - {fileID: 8300000, guid: c6f59434600254ed39f18de21dc0e0f9, type: 3}
+  - {fileID: 8300000, guid: e585992a9353c49f5b628f11e917c6b3, type: 3}
+  - {fileID: 8300000, guid: c9c50c1d485744a3fb810bc9191523d7, type: 3}
   soundFx:
   - {fileID: 8300000, guid: 9308c0d5f1bad4792aea4ca60c609132, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: b1cf0b613d08a48ceb3c70ddb2eed820, type: 3}
+  - {fileID: 8300000, guid: 1ad4e174d9f204a0e8e37a8d8c1da0b7, type: 3}
+  - {fileID: 8300000, guid: 02e124beeb3e24b32be05cd68062df15, type: 3}
+  - {fileID: 8300000, guid: 5d65b6c613f764a2c9b99ee9349f0037, type: 3}
+  - {fileID: 8300000, guid: 0a2f2f04c14304754bb1c7a8bcbed256, type: 3}
+  - {fileID: 8300000, guid: fbeac315bc9b94121911e6d80afd298a, type: 3}
+  - {fileID: 8300000, guid: fbeac315bc9b94121911e6d80afd298a, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
