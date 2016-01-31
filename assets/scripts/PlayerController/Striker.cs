@@ -11,6 +11,7 @@ public class Striker : MonoBehaviour {
 	
 	public int damageValue = 10;
 	public float knockbackValue = 2;
+	public GameObject hitEffect;
 	
 	#endregion
 	//--------------------------------------------------------------------------------
@@ -20,7 +21,10 @@ public class Striker : MonoBehaviour {
 	//--------------------------------------------------------------------------------
 	#region MonoBehaviour Events
 	void Start() {
-	
+		if (hitEffect != null) {
+			hitEffect.transform.SetParent(transform.parent);
+			hitEffect.SetActive(false);
+		}
 	}
 	
 	void Update() {
@@ -36,7 +40,7 @@ public class Striker : MonoBehaviour {
 		force *= knockbackValue;
 		
 		CharDamage dam = other.GetComponent<CharDamage>();
-		if (dam != null) dam.ApplyDamage(10);
+		if (dam != null) dam.ApplyDamage(damageValue);
 		
 		CharController charCtrl = other.GetComponent<CharController>();
 		if (charCtrl != null) {
@@ -45,7 +49,11 @@ public class Striker : MonoBehaviour {
 			Rigidbody2D targetRbody = other.GetComponentInParent<Rigidbody2D>();
 			if (targetRbody != null) targetRbody.AddForce(force, ForceMode2D.Impulse);
 		}
-		Debug.Log("Applying knockback: " + force);
+		
+		if (hitEffect != null) {
+			hitEffect.transform.position = transform.position;
+			hitEffect.SetActive(true);
+		}
 		
 	}
 	
