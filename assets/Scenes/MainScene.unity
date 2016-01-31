@@ -19853,6 +19853,22 @@ Prefab:
       propertyPath: m_Text
       value: P4
       objectReference: {fileID: 0}
+    - target: {fileID: 422086, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 422086, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.743
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192378, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: m_Offset.x
+      value: -0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192378, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
+      propertyPath: m_Offset.y
+      value: -0.16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4fa09f2002fc476bb946eb11c8699d2, type: 2}
   m_IsPrefabParent: 0
