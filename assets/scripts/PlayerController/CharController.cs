@@ -277,6 +277,7 @@ public class CharController : MonoBehaviour {
 				targetSpeed = runSpeed;
 				break;
 			}
+			if (grabber.carrying) targetSpeed *= grabber.speedFactor;
 			velocity.x = Mathf.MoveTowards(velocity.x, targetSpeed, acceleration * Time.deltaTime);
 			velocity.y = rbody.velocity.y;
 			rbody.velocity = velocity;

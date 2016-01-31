@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class GoatGrabber : MonoBehaviour {
 	#region Public Properties
 	
+	public float speedFactor = 0.8f;
+	
 	public UnityEvent onGoatGrabbed;
 	public UnityEvent onGoatDropped;
 	
