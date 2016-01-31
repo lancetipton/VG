@@ -28,7 +28,7 @@ InputManager:
     negativeButton: a
     positiveButton: d
     altNegativeButton: 
-    altPositiveButton: e
+    altPositiveButton: 
     gravity: 3
     dead: 0.001
     sensitivity: 3
@@ -89,10 +89,10 @@ InputManager:
     m_Name: Player 1 Vertical
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: down
-    positiveButton: up
-    altNegativeButton: s
-    altPositiveButton: w
+    negativeButton: s
+    positiveButton: w
+    altNegativeButton: 
+    altPositiveButton: 
     gravity: 3
     dead: 0.001
     sensitivity: 3
