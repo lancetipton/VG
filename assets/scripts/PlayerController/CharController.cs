@@ -96,9 +96,9 @@ public class CharController : MonoBehaviour {
 		ContinueState();
 		
 		// Debugging
-		debugText.text = "State: " + state + " (" + timeInState + ")"
-			+ "\ngrounded: " + grounded
-			+ "\nvelocity: " + rbody.velocity;
+		//debugText.text = "State: " + state + " (" + timeInState + ")"
+		//	+ "\ngrounded: " + grounded
+		//	+ "\nvelocity: " + rbody.velocity;
 	}
 	
 	void LateUpdate() {
