@@ -13,7 +13,7 @@ public class Respawns : MonoBehaviour {
 	}
 
 	public GameObject RandomSpawn(){
-		int num = Random.Range(0,7);
+		int num = Random.Range(1,ResData.Length);
 		return ResData[num];
 	}
 

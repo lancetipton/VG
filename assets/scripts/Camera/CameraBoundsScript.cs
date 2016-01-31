@@ -4,12 +4,16 @@ using System.Collections.Generic;
 
 public class CameraBoundsScript: MonoBehaviour {
 
-	public GameObject[] targets;
-
 	public float offsetX;
 	public float offsetY;
 
+	private GameObject[] targets;
+
 	private Vector3 velocity = new Vector3();
+
+	void Start() {
+		targets = GameObject.FindGameObjectsWithTag("Players");
+	}
 
 	void Update() {
 		// Figure out our bounds and such.
