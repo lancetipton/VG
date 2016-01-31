@@ -38,13 +38,12 @@ public class Alter : MonoBehaviour {
 	}
 	
 	void Winround(){
-		camBounds.CancelFocusOnAltar();
 		skybeams.Play();
 		alterFx.Stop();
 		WinRound.instance.ShowWinner();	
+		camBounds.Invoke("CancelFocusOnAltar", 2);
 		Invoke("RestartGame", 4f);
 	}
-
 
 	void RestartGame(){
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

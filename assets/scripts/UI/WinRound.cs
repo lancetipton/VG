@@ -18,7 +18,7 @@ public class WinRound : MonoBehaviour {
 
 	public void ShowWinner(){
 		back.SetActive(true);
-		winner.text = "Player " + Goat.instance.lastCarry + " wins the round!";
+		winner.text = "PLAYER " + Goat.instance.lastCarry + " WINS!";
 	}
 
 }
