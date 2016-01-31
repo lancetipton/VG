@@ -13,7 +13,7 @@ public class CharController : MonoBehaviour {
 	public AudioClip[] sounds;
 	public UnityEngine.UI.Text debugText;
 	public LayerMask groundLayers;
-	public GameObject hitCollider;
+	public Striker striker;
 	
 	#endregion
 	//--------------------------------------------------------------------------------
@@ -125,7 +125,7 @@ public class CharController : MonoBehaviour {
 		Vector2 force = transform.TransformDirection(Vector3.right);
 		Rigidbody2D targetRbody = target.GetComponent<Rigidbody2D>();
 		if (targetRbody != null) targetRbody.AddForceAtPosition(force, 
-			hitCollider.transform.position, ForceMode2D.Impulse);
+			striker.transform.position, ForceMode2D.Impulse);
 		CharDamage dam = target.GetComponent<CharDamage>();
 		if (dam != null) dam.ApplyDamage(10);
 	}
@@ -189,9 +189,11 @@ public class CharController : MonoBehaviour {
 			break;
 		case State.WeakHitting:
 			animator.Play(kWeakHitAnim);
+			striker.SetStrongMode(false);
 			break;
 		case State.StrongHitting:
 			animator.Play(kStrongHitAnim);
+			striker.SetStrongMode(true);
 			break;
 		case State.KnockedBack:
 			grounded = false;
@@ -241,12 +243,12 @@ public class CharController : MonoBehaviour {
 			break;
 			
 		case State.WeakHitting:
-			hitCollider.SetActive(timeInState > 0.05f && timeInState < 0.15f);
+			striker.gameObject.SetActive(timeInState > 0.05f && timeInState < 0.15f);
 			if (timeInState > 0.2f) EnterState(State.Idle);
 			break;
 			
 		case State.StrongHitting:
-			hitCollider.SetActive(timeInState > 0.15f && timeInState < 0.33f);
+			striker.gameObject.SetActive(timeInState > 0.15f && timeInState < 0.33f);
 			if (timeInState > 0.4f) EnterState(State.Idle);
 			break;
 			
