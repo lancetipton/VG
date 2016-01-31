@@ -6,6 +6,7 @@ public class Goat: MonoBehaviour {
 
 	public float walkSpeed = 0.7f;
 	public float minStateTime = 0.5f;
+	public GameObject respawn;
 
 	public int lastCarry = 5;
 
@@ -113,9 +114,7 @@ public class Goat: MonoBehaviour {
 	}
 
 	void doRespawn() {
-		// Respawn 0 is the goat respawn.
-		// TODO Maybe make it clearer than that???
-		transform.position = Respawns.instance.ResData[0].transform.position;
+		transform.position = respawn.transform.position;
 		gameObject.SetActive(true);
 	}
 
