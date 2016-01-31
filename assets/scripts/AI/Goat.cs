@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 
 public class Goat: MonoBehaviour {
+	
+	public static Goat instance;
 
 	public float walkSpeed = 0.7f;
 	public float minStateTime = 0.5f;
+
+	public int lastCarry = 5;
 
 	bool shouldChangeState = false;
 	float stateStartTime;
@@ -26,6 +30,11 @@ public class Goat: MonoBehaviour {
 	public void Respawn() {
 		gameObject.SetActive(false);
 		Invoke("doRespawn", 3f);
+	}
+
+
+	void Awake(){
+		instance = this;
 	}
 
 	void Start() {

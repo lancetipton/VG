@@ -67,6 +67,8 @@ public class GoatGrabber : MonoBehaviour {
 		goat.MovePosition(transform.position);
 		goat.GetComponent<Collider2D>().enabled = false;
 		onGoatGrabbed.Invoke();
+		CharController player = GetComponentInParent<CharController>();
+		Goat.instance.lastCarry = player.playerNum;
 	}
 	
 	#endregion
