@@ -9,14 +9,20 @@ using System.Collections.Generic;
 public class Striker : MonoBehaviour {
 	#region Public Properties
 	
-	public int damageValue = 10;
-	public float knockbackValue = 2;
+	public int weakDamageValue = 5;
+	public float weakKnockbackValue = 1;
+	
+	public int strongDamageValue = 15;
+	public float strongKnockbackValue = 2;
+	
 	public GameObject hitEffect;
 	
 	#endregion
 	//--------------------------------------------------------------------------------
 	#region Private Properties
-
+	
+	bool strongMode = false;
+	
 	#endregion
 	//--------------------------------------------------------------------------------
 	#region MonoBehaviour Events
@@ -37,10 +43,10 @@ public class Striker : MonoBehaviour {
 		// Calculate the force to apply
 		Vector2 force = transform.TransformVector(Vector3.right);
 		force.y = 0.5f;	// add a bit of upward force
-		force *= knockbackValue;
+		force *= (strongMode ? strongKnockbackValue : weakKnockbackValue);
 		
 		CharDamage dam = other.GetComponent<CharDamage>();
-		if (dam != null) dam.ApplyDamage(damageValue);
+		if (dam != null) dam.ApplyDamage(strongMode ? strongDamageValue : weakDamageValue);
 		
 		CharController charCtrl = other.GetComponent<CharController>();
 		if (charCtrl != null) {
@@ -61,6 +67,10 @@ public class Striker : MonoBehaviour {
 	#endregion
 	//--------------------------------------------------------------------------------
 	#region Public Methods
+	
+	public void SetStrongMode(bool strongMode) {
+		this.strongMode = strongMode;
+	}
 	
 	#endregion
 	//--------------------------------------------------------------------------------
