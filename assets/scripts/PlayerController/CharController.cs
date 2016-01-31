@@ -74,7 +74,7 @@ public class CharController : MonoBehaviour {
 		rbody = GetComponent<Rigidbody2D>();
 		grabber = GetComponentInChildren<GoatGrabber>();
 		defaultScale = transform.localScale;
-		rbody.isKinematic = false;
+		rbody.isKinematic = false;		
 	}
 	
 	void Update() {
@@ -110,15 +110,18 @@ public class CharController : MonoBehaviour {
 	#region Public Methods
 
 	public void PlaySound(string name) {
-		if (!audioSource.enabled) return;
-		foreach (AudioClip clip in sounds) {
-			if (clip.name == name) {
-				audioSource.clip = clip;
-				audioSource.Play();
-				return;
-			}
-		}
-		Debug.LogWarning(gameObject + ": AudioClip not found: " + name);
+		
+		SoundManager.instance.FindPlayerFX(playerNum, name);
+		
+		//if (!audioSource.enabled) return;
+		//foreach (AudioClip clip in sounds) {
+		//	if (clip.name == name) {
+		//		audioSource.clip = clip;
+		//		audioSource.Play();
+		//		return;
+		//	}
+		//}
+		//Debug.LogWarning(gameObject + ": AudioClip not found: " + name);
 	}
 	
 	public void HitObject(GameObject target) {
@@ -128,6 +131,7 @@ public class CharController : MonoBehaviour {
 			striker.transform.position, ForceMode2D.Impulse);
 		CharDamage dam = target.GetComponent<CharDamage>();
 		if (dam != null) dam.ApplyDamage(10);
+		SoundManager.instance.FindPlayerFX(playerNum, "hit");
 	}
 	
 	public void TakeHit(Vector2 knockbackForce) {
@@ -146,6 +150,7 @@ public class CharController : MonoBehaviour {
 	}
 	
 	public void GoatGrabbed() {
+		SoundManager.instance.FindPlayerFX(playerNum, "pick-up");
 	}
 	
 	public void GoatDropped() {
@@ -167,6 +172,8 @@ public class CharController : MonoBehaviour {
 	
 	public void ActivateStriker() {
 		striker.gameObject.SetActive(true);
+		// And play the "swing" sound... yep, it's a hack:
+		SoundManager.instance.FindPlayerFX(playerNum, "swing");
 	}
 	
 	public void DeactivateStriker() {
@@ -200,6 +207,7 @@ public class CharController : MonoBehaviour {
 			break;
 		case State.JumpingUp:
 			animator.Play(kJumpStartAnim + (grabber.carrying ? "_Carry" : null));
+			SoundManager.instance.FindPlayerFX(playerNum, "jump");
 			rbody.AddRelativeForce(new Vector2(0f, jumpSpeed), ForceMode2D.Impulse);
 			break;
 		case State.JumpingDown:
