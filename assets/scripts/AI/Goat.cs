@@ -36,7 +36,7 @@ public class Goat: MonoBehaviour {
 		// See if we have ground to the left or right of us.
 		var bounds = GetComponent<Collider2D>().bounds;
 		// Use our own size, but be depth shy (y / 2).
-		var extents = new Vector3(bounds.extents.x, bounds.extents.y / 2);
+		var extents = new Vector3(bounds.extents.x, bounds.extents.y / 4);
 		var left = bounds.min - extents;
 		var right = new Vector3(bounds.max.x + extents.x, bounds.min.y - extents.y);
 		hasLeft = checkBounds(left, extents);
@@ -49,7 +49,9 @@ public class Goat: MonoBehaviour {
 		var hits = Physics2D.OverlapAreaAll(position - extents, position + extents);
 		var any = false;
 		foreach (var hit in hits) {
-			if (hit.gameObject == gameObject) continue;
+			if (hit.gameObject == gameObject || hit.gameObject.tag == "Players") {
+				continue;
+			}
 			any = true;
 		}
 		if (any) {
@@ -89,7 +91,9 @@ public class Goat: MonoBehaviour {
 						enterState(Random.value < 0.5 ? State.Left : State.Right);
 					}
 				}
-				setVelocity(0);
+				// If we explicitly stop motion, it can still bother with
+				// forward throwing sometimes, so just leave idle implicit.
+				//setVelocity(0);
                 break;
 		}
 	}
@@ -113,8 +117,15 @@ public class Goat: MonoBehaviour {
 	}
 
 	void setVelocity(float velocity) {
-		var body = GetComponent<Rigidbody2D>();
-		body.velocity = new Vector2(velocity, body.velocity.y);
+		var bounds = GetComponent<Collider2D>().bounds;
+		var extents = new Vector3(bounds.extents.x, bounds.extents.y / 4);
+		var under = new Vector3(bounds.center.x, bounds.min.y - extents.y);
+		if (checkBounds(under, extents)) {
+			// We're (mostly) on the ground, so we can move.
+			// This also got introduced to avoid trouble with forward throwing.
+			var body = GetComponent<Rigidbody2D>();
+			body.velocity = new Vector2(velocity, body.velocity.y);
+		}
 	}
 
 }

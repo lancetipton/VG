@@ -216,6 +216,7 @@ public class CharController : MonoBehaviour {
 				EnterState(State.JumpingUp);
 				airJumpsDone++;
 			}
+			CheckAttacks();
 			break;
 			
 		case State.JumpingDown:
@@ -224,6 +225,7 @@ public class CharController : MonoBehaviour {
 				EnterState(State.JumpingUp);
 				airJumpsDone++;
 			}
+			CheckAttacks();
 			break;
 			
 		case State.Landing:
@@ -251,24 +253,34 @@ public class CharController : MonoBehaviour {
 	
 	bool RunOrJump() {
 		if (jumpJustPressed && grounded) SetOrKeepState(State.JumpingUp);
-		else if (weakHitPressed && grounded) {
-			if (!grabber.carrying) SetOrKeepState(State.WeakHitting);
-		} else if (strongHitPressed && grounded) {
-			if (grabber.carrying) {
-				// Throw in the direction of the Dpad.
-				Vector3 throwDir;
-				if (horzInput == 0) throwDir = Vector3.up;
-				else throwDir = new Vector3(Mathf.Sign(horzInput), 0.5f, 0);
-				grabber.DropGoat(throwDir * 5);
-			} else {
-				SetOrKeepState(State.StrongHitting);
-			}
+		else if (CheckAttacks()) {
+			return true;
 		} else if (horzInput < 0) SetOrKeepState(State.RunningLeft);
 		else if (horzInput > 0) SetOrKeepState(State.RunningRight);
 		else return false;
 		return true;
 	}
 	
+	bool CheckAttacks() {
+		if (weakHitPressed) {
+			if (!grabber.carrying) {
+				SetOrKeepState(State.WeakHitting);
+				return true;
+			}
+		} else if (strongHitPressed) {
+			if (grabber.carrying) {
+				// Throw in the direction of the Dpad.
+				Vector3 throwDir;
+				if (horzInput == 0) throwDir = Vector3.up;
+				else throwDir = new Vector3(Mathf.Sign(horzInput), 0.5f, 0);
+				grabber.DropGoat((Vector2)throwDir * 5 + velocity * 2);
+			} else {
+				SetOrKeepState(State.StrongHitting);
+				return true;
+			}
+		}
+		return false;
+	}
 	
 	void Face(int direction) {
 		transform.localScale = new Vector3(defaultScale.x * direction, defaultScale.y, defaultScale.z);
