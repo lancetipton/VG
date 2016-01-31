@@ -251,9 +251,19 @@ public class CharController : MonoBehaviour {
 	
 	bool RunOrJump() {
 		if (jumpJustPressed && grounded) SetOrKeepState(State.JumpingUp);
-		else if (weakHitPressed && grounded && !grabber.carrying) SetOrKeepState(State.WeakHitting);
-		else if (strongHitPressed && grounded && !grabber.carrying) SetOrKeepState(State.StrongHitting);
-		else if (horzInput < 0) SetOrKeepState(State.RunningLeft);
+		else if (weakHitPressed && grounded) {
+			if (!grabber.carrying) SetOrKeepState(State.WeakHitting);
+		} else if (strongHitPressed && grounded) {
+			if (grabber.carrying) {
+				// Throw in the direction of the Dpad.
+				Vector3 throwDir;
+				if (horzInput == 0) throwDir = Vector3.up;
+				else throwDir = new Vector3(Mathf.Sign(horzInput), 0.5f, 0);
+				grabber.DropGoat(throwDir * 5);
+			} else {
+				SetOrKeepState(State.StrongHitting);
+			}
+		} else if (horzInput < 0) SetOrKeepState(State.RunningLeft);
 		else if (horzInput > 0) SetOrKeepState(State.RunningRight);
 		else return false;
 		return true;
