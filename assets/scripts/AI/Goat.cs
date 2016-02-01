@@ -62,7 +62,7 @@ public class Goat: MonoBehaviour {
 		continueState();
 		
 		if (Time.time > nextBleatTime) {
-			//SoundManager.instance.FindFX("baa");
+			SoundManager.instance.FindFX("baa");
 			nextBleatTime = Time.time + Random.Range(5,15);
 		}
 	}
